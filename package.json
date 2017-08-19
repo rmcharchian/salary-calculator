@@ -4,7 +4,8 @@
   "description": "Weekend Challenge 4 - Salary Calculator",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/rmcharchian/salary-calculator/issues"
   },
-  "homepage": "https://github.com/rmcharchian/salary-calculator#readme"
+  "homepage": "https://github.com/rmcharchian/salary-calculator#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "pg": "^7.1.2"
+  }
 }
