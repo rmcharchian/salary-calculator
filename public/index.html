@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Employee Records</title>
-    <script src="public/vendors/angular.min.js"></script>
-    <script src="public/scripts/client.js"></script>
+    <script src="vendors/angular.min.js"></script>
+    <script src="scripts/client.js"></script>
+    <link rel="stylesheet" href="styles.css">
 
 </head>
-<body>
+<body ng-app="EmployeeApp" ng-controller="EmployeeController as vm">
     <h1>Employee Records</h1>
+    <div id="employeeInfoFields">
+        <input type="text" id="firstNameInput" placeholder="First Name">
+        <input type="text" id="lastNameInput" placeholder="Last Name">
+        <input type="text" id="annualSalaryInput" placeholder="Annual Salary">
+        <input type="text" id="jobTitleInput" placeholder="Job Title">
+
+    </div>    
     
 </body>
 </html>
