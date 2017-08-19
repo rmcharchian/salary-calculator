@@ -7,5 +7,15 @@ app.controller('EmployeeController', ['$http', function ($http){
     var self = this;
     self.employees = [];
 
-
+    self.getEmployees = function(){
+        $http({
+            method: 'GET',
+            url: '/employee'
+        }).then(function(response){
+            console.log(response);
+            console.log(response.data);
+            self.employees = response.data;
+        });
+    };
+    self.getEmployees();
 }])
