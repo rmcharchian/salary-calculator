@@ -5,7 +5,7 @@
     <title>Employee Records</title>
     <script src="vendors/angular.min.js"></script>
     <script src="scripts/client.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 
 </head>
 <body ng-app="EmployeeApp" ng-controller="EmployeeController as vm">
@@ -15,6 +15,7 @@
         <input type="text" id="lastNameInput" placeholder="Last Name">
         <input type="text" id="annualSalaryInput" placeholder="Annual Salary">
         <input type="text" id="jobTitleInput" placeholder="Job Title">
+        <button id="sendEmployeeInfoButton" ng-click="vm.postEmployeeInfo()">Submit</button>
 
     </div>    
     
