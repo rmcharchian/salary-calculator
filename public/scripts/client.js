@@ -6,6 +6,7 @@ app.controller('EmployeeController', ['$http', function ($http){
     console.log('Employee Controller has been loaded');
     var self = this;
     self.employees = [];
+    self.newEmployee = {};
 
     self.getEmployees = function(){
         $http({
@@ -19,6 +20,7 @@ app.controller('EmployeeController', ['$http', function ($http){
     };
 
     self.postNewEmployee = function(){
+        console.log(self.newEmployee);
         $http({
             method: 'POST',
             url: '/employee',
