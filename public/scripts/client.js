@@ -28,6 +28,7 @@ app.controller('EmployeeController', ['$http', function ($http){
         }).then(function(response){
             console.log(response);
             self.getEmployees();
+            self.newEmployee = {};
         });
     };
     self.getEmployees();
