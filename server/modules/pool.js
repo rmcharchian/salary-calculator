@@ -5,7 +5,7 @@ var config = {
     host: 'localhost',
     port: 5432,
     max: 10,
-    idleTimeoutMills: 3000
+    idleTimeoutMillis: 3000
 };
 
 module.exports = pg.Pool(config);

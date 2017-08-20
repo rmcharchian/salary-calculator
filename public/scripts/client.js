@@ -17,5 +17,16 @@ app.controller('EmployeeController', ['$http', function ($http){
             self.employees = response.data;
         });
     };
+
+    self.postNewEmployee = function(){
+        $http({
+            method: 'POST',
+            url: '/employee',
+            data: self.newEmployee
+        }).then(function(response){
+            console.log(response);
+            self.getEmployees();
+        });
+    };
     self.getEmployees();
-}])
+}]);

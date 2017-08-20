@@ -11,13 +11,27 @@
 <body ng-app="EmployeeApp" ng-controller="EmployeeController as vm">
     <h1>Employee Records</h1>
     <div id="employeeInfoFields">
-        <input type="text" id="firstNameInput" placeholder="First Name">
-        <input type="text" id="lastNameInput" placeholder="Last Name">
-        <input type="text" id="annualSalaryInput" placeholder="Annual Salary">
-        <input type="text" id="jobTitleInput" placeholder="Job Title">
+        <input type="text" id="firstNameInput" placeholder="First Name" ng-model="vm.getEmployees.first_name">
+        <input type="text" id="lastNameInput" placeholder="Last Name" ng-model="vm.getEmployees.last_name">
+        <input type="text" id="annualSalaryInput" placeholder="Annual Salary" ng-model="vm.getEmployees.annual_salary">
+        <input type="text" id="jobTitleInput" placeholder="Job Title" ng-model="vm.getEmployees.job_title">
         <button id="sendEmployeeInfoButton" ng-click="vm.postEmployeeInfo()">Submit</button>
-
-    </div>    
-    
+    </div>  
+    <table>
+        <thead>
+            <tr>First Name</tr>
+            <tr>Last Name </tr>
+            <tr>Annual Salary</tr>
+            <tr>Job Title</tr>
+        </thead>   
+        <tbody>
+            <tr ng-repeat="employees in vm.employees">
+                <td>{{employees.first_name}}</td>
+                <td>{{employees.last_name}}</td>
+                <td>{{employees.annual_salary}}</td>
+                <td>{{employees.job_title}}</td> 
+            </tr>      
+        </tbody>     
+    </table>    
 </body>
 </html>
