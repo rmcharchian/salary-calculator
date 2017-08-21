@@ -43,6 +43,25 @@ router.post('/', function(req, res){
 	});
 });
 
+router.get('/', function(req, res) {
+    console.log('employee get monthly was hit');
+    pool.connect(function(errorConnectingToDatabase, client, done){
+        if(errorConnectingToDatabase) {
+            console.log('Error connecting to database', errorConnectingToDatabase);
+            res.sendStatus(500);
+        } else {
+            client.query('SELECT SUM(annual_salary) FROM employees;', function(errorMakingQuery, result){
+                done();
+                if(errorMakingQuery) {
+                    console.log('Error making database query', errorMakingQuery);
+                    res.send(result.rows);
+                } else {
+                    res.send(result.rows);
+                }
+            });
+        }
+    });
+});
 
 
 
