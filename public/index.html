@@ -18,14 +18,14 @@
         <button id="sendEmployeeInfoButton" ng-click="vm.postNewEmployee()">Submit</button>
     </div>  
     <br></br>
-    <h1>Employee List</h1>
+    <h2>Employee List</h2>
     <table>
-        <thead>
+        <th>
             <tr>First Name</tr>
             <tr>Last Name </tr>
             <tr>Annual Salary</tr>
             <tr>Job Title</tr>
-        </thead>   
+        </th>   
         <tbody>
             <tr ng-repeat="employees in vm.employees">
                 <td>{{employees.first_name}}</td>
@@ -35,7 +35,7 @@
             </tr>      
         </tbody>     
     </table> 
-    <h1>Monthly Salary Expenditures:</h1>
+    <h2>Monthly Salary Expenditures:</h2>
     
 </body>
 </html>
